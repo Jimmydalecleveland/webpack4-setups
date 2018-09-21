@@ -14,3 +14,8 @@ to start a hot reloading server run:
 ```bash
 yarn start
 ```
+
+### References
+[react-hot-loader](https://github.com/gaearon/react-hot-loader/)
+
+[@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env)
