@@ -2,7 +2,7 @@ import Wizard from './Wizard';
 console.log(new Wizard('Bob'));
 console.log(new Wizard('Ravalynn', 'Frost'));
 
-function component() {
+const component = () => {
   let element = document.createElement('div');
   const obj = { a: 'alpha', b: 'bravo' };
 
@@ -12,6 +12,6 @@ function component() {
   // ES8 Object.values test
   console.log(Object.values(newObj));
   return element;
-}
+};
 
 document.body.appendChild(component());
