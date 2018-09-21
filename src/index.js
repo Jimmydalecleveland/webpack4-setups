@@ -11,6 +11,7 @@ const component = () => {
 
   // ES8 Object.values test
   console.log(Object.values(newObj));
+
   return element;
 };
 
