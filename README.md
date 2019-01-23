@@ -2,7 +2,7 @@
 
 To compile run: 
 ```bash
-npx webpacknpx webpack --config webpack.config.js
+npx webpack --config webpack.config.js
 ```
 
 or use the package.json script:
