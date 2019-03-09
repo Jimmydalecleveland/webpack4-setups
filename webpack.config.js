@@ -5,7 +5,8 @@ module.exports = {
   // mode defaults to 'production' if not set
   mode: 'development',
 
-  entry: './src/index.js',
+  // place babel polyfill in entry array to add any esnext methods
+  entry: ['@babel/polyfill', './src/index.js'],
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
