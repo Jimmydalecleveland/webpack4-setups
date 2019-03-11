@@ -1,12 +1,10 @@
-// const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
   // mode defaults to 'production' if not set
   mode: 'development',
 
-  // place babel polyfill in entry array to add any esnext methods
-  entry: ['./src/index.js'],
+  entry: './src/index.js',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
