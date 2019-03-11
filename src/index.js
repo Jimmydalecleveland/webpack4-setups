@@ -1,7 +1,8 @@
 import Wizard from './Wizard';
 
-console.log(new Wizard('Bob'));
-console.log(new Wizard('Ravalynn', 'Frost'));
+const Ravalynn = new Wizard('Ravalynn', 'Frost');
+console.log(Ravalynn);
+console.log('-------------------');
 
 const component = () => {
   let element = document.createElement('div');
@@ -9,17 +10,24 @@ const component = () => {
 
   // ES7 Object spread test
   const newObj = { ...obj, c: 'charlie' };
+  console.log('ES7 Object spread example: newObj');
+  console.log(newObj);
 
   // ES8 Object.values test
   // Will not transpile without babel polyfills because it is a new method
+  console.log('-------------------');
+  console.log('ES8 Object.values example: Object.values(newObj)');
   console.log(Object.values(newObj));
+  console.log('-------------------');
   // ES Array.includes test
+  console.log("ES7 Array.includes example: ['a', 'b', 'c'].includes('b')");
   console.log(['a', 'b', 'c'].includes('b'));
+  console.log('-------------------');
 
   return element;
 };
 
-// Asyncronous block scoping test
+// Event queue block scoping test
 for (let i = 0; i < 10; i++) {
   setTimeout(function() {
     console.log(i);
