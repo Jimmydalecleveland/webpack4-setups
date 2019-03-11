@@ -119,9 +119,9 @@ function () {
 
 
   _createClass(Wizard, [{
-    key: "saySecret",
-    value: function saySecret() {
-      console.log('secret');
+    key: "genericClassMethod",
+    value: function genericClassMethod() {
+      return 'This works without transpiling';
     }
   }]);
 
@@ -147,8 +147,9 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
-console.log(new _Wizard__WEBPACK_IMPORTED_MODULE_0__["default"]('Bob'));
-console.log(new _Wizard__WEBPACK_IMPORTED_MODULE_0__["default"]('Ravalynn', 'Frost'));
+var Ravalynn = new _Wizard__WEBPACK_IMPORTED_MODULE_0__["default"]('Ravalynn', 'Frost');
+console.log(Ravalynn);
+console.log('-------------------');
 
 var component = function component() {
   var element = document.createElement('div');
@@ -159,12 +160,33 @@ var component = function component() {
 
   var newObj = _objectSpread({}, obj, {
     c: 'charlie'
-  }); // ES8 Object.values test
+  });
 
+  console.log('ES7 Object spread example: newObj');
+  console.log(newObj); // ES8 Object.values test
+  // Will not transpile without babel polyfills because it is a new method
 
+  console.log('-------------------');
+  console.log('ES8 Object.values example: Object.values(newObj)');
   console.log(Object.values(newObj));
+  console.log('-------------------'); // ES Array.includes test
+
+  console.log("ES7 Array.includes example: ['a', 'b', 'c'].includes('b')");
+  console.log(['a', 'b', 'c'].includes('b'));
+  console.log('-------------------');
   return element;
+}; // Event queue block scoping test
+
+
+var _loop = function _loop(i) {
+  setTimeout(function () {
+    console.log(i);
+  }, 1);
 };
+
+for (var i = 0; i < 10; i++) {
+  _loop(i);
+}
 
 document.body.appendChild(component());
 
