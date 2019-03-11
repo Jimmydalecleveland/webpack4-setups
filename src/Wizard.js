@@ -10,8 +10,8 @@ const Wizard = class {
   // static staticProperty = 'Static Property';
 
   // Works by default
-  saySecret() {
-    console.log('secret');
+  genericClassMethod() {
+    return 'This works without transpiling';
   }
 };
 
