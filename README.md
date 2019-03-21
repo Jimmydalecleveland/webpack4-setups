@@ -1,4 +1,4 @@
-# ESNext Webpack 4 Setup
+# ES6+ Webpack 4 & Babel Setup
 
 To compile run:
 
