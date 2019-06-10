@@ -1,4 +1,4 @@
-# ESNext Webpack 4 Setup
+# React Webpack 4 Setup
 
 To compile run: 
 ```bash
