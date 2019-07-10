@@ -1,5 +1,12 @@
 import Wizard from './Wizard';
 
+// click anywhere to load this module
+window.addEventListener('click', function () {
+  const Fighter = import('./Fighter').then((module) => {
+    new module.default().attack()
+  })
+})
+
 const Ravalynn = new Wizard('Ravalynn', 'Frost');
 console.log(Ravalynn);
 console.log('-------------------');
@@ -29,7 +36,7 @@ const component = () => {
 
 // Event queue block scoping test
 for (let i = 0; i < 10; i++) {
-  setTimeout(function() {
+  setTimeout(function () {
     console.log(i);
   }, 1);
 }
